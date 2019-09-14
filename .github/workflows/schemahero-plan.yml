@@ -15,6 +15,6 @@ jobs:
   comment:
     name: Comment
     runs-on: ubuntu-18.04
-    needs: retreive_plan
+    needs: retrieve_plan
     steps:
       - uses: actions/checkout@v1
