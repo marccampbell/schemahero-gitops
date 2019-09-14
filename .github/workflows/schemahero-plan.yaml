@@ -1,0 +1,18 @@
+name: schemahero plan
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  retrieve_plan:
+    name: Retrieve Plan
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: ./.github/actions/schemahero-plan
+  comment:
+    name: Comment
+    runs-on: ubuntu-18.04
+    needs: retreive_plan
+    run: echo Need to comment
