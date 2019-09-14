@@ -1,4 +1,4 @@
-name: schemahero plan
+name: SchemaHero Plan
 
 on:
   pull_request:
