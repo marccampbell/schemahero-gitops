@@ -10,6 +10,7 @@ jobs:
     name: Retrieve Plan
     runs-on: ubuntu-18.04
     steps:
+      - uses: actions/checkout@v1
       - uses: ./.github/actions/schemahero-plan
   comment:
     name: Comment
