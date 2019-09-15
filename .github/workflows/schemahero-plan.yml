@@ -1,4 +1,4 @@
-name: schemahero plan
+name: SchemaHero Plan
 
 on:
   pull_request:
@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - uses: ./.github/actions/schemahero-plan
+      - uses: docker://schemahero/schemahero-action:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   comment:
     name: Comment
     runs-on: ubuntu-18.04
-    needs: retreive_plan
+    needs: retrieve_plan
     steps:
       - uses: actions/checkout@v1
