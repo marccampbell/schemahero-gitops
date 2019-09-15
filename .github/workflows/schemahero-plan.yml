@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - uses: ./.github/actions/schemahero-plan
+      - uses: docker://schemahero/schemahero-action:latest
   comment:
     name: Comment
     runs-on: ubuntu-18.04
